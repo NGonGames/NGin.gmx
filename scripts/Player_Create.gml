@@ -1,4 +1,9 @@
-
+if (global.player_start_x != noone && global.player_start_y != noone) {
+    x = global.player_start_x;
+    y = global.player_start_y;
+    global.player_start_x = noone;
+    global.player_start_y = noone;
+}
 
 instance_create(x, y, Camera);  // create camera object to act as the viewport for the player
 

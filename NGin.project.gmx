@@ -9,6 +9,7 @@
     <sprite>sprites\solidmask_sprite</sprite>
     <sprite>sprites\semisolid_sprite</sprite>
     <sprite>sprites\playermask_sprite</sprite>
+    <sprite>sprites\doormask_sprite</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -80,6 +81,10 @@
       <script>scripts\Mechanism_Create.gml</script>
       <script>scripts\Mechanism_Step.gml</script>
     </scripts>
+    <scripts name="Door">
+      <script>scripts\Door_Create.gml</script>
+      <script>scripts\Door_Step.gml</script>
+    </scripts>
   </scripts>
   <objects name="objects">
     <object>objects\Player</object>
@@ -95,10 +100,12 @@
       <object>objects\Logger</object>
       <object>objects\Animation</object>
     </objects>
+    <object>objects\Door</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\setup</room>
-    <room>rooms\room1</room>
+    <room>rooms\test0</room>
+    <room>rooms\test1</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
