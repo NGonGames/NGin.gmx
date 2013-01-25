@@ -10,8 +10,8 @@ instance_create(x, y, Camera);  // create camera object to act as the viewport f
     /** -- Any variable description preceded by @ is 
         modifiable for the purpose of changing game feel -- **/
 
-xspd = 0;       // current x velocity
-yspd = 0;       // current y velocity
+xspd[0] = 0;       // current x velocity
+yspd[0] = 0;       // current y velocity
 
 xmax = 14;      // @maximum horizontal velocity
 xcap = xmax;    // maximum horizontal speed

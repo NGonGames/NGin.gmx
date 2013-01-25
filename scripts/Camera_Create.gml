@@ -13,7 +13,7 @@ x_acl = 1.5;
 y_acl = 2;
 
 xfac = 9;
-yfac = 3;
+yfac = 2;
 
 xspd = 0;
 yspd = 0;

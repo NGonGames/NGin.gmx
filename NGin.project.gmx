@@ -44,11 +44,27 @@
       <script>scripts\Player_X_Input.gml</script>
       <script>scripts\Player_X_Accelerate.gml</script>
       <script>scripts\Player_Detect_Dash.gml</script>
+      <script>scripts\Player_Attach_Force.gml</script>
     </scripts>
     <scripts name="StateTemplate">
       <script>scripts\State_Create.gml</script>
       <script>scripts\State_Step.gml</script>
       <script>scripts\State_Change.gml</script>
+    </scripts>
+    <scripts name="Animation">
+      <script>scripts\Animation_Create.gml</script>
+      <script>scripts\Animation_Refresh.gml</script>
+      <script>scripts\Animation_Update.gml</script>
+    </scripts>
+    <scripts name="Triggers">
+      <script>scripts\Trigger_Create.gml</script>
+      <script>scripts\Trigger_Step.gml</script>
+      <script>scripts\Mechanism_Create.gml</script>
+      <script>scripts\Mechanism_Step.gml</script>
+    </scripts>
+    <scripts name="Door">
+      <script>scripts\Door_Create.gml</script>
+      <script>scripts\Door_Step.gml</script>
     </scripts>
     <scripts name="Utils">
       <scripts name="Camera">
@@ -70,26 +86,24 @@
       <script>scripts\Move_Y.gml</script>
       <script>scripts\iff.gml</script>
     </scripts>
-    <scripts name="Animation">
-      <script>scripts\Animation_Create.gml</script>
-      <script>scripts\Animation_Refresh.gml</script>
-      <script>scripts\Animation_Update.gml</script>
-    </scripts>
-    <scripts name="Triggers">
-      <script>scripts\Trigger_Create.gml</script>
-      <script>scripts\Trigger_Step.gml</script>
-      <script>scripts\Mechanism_Create.gml</script>
-      <script>scripts\Mechanism_Step.gml</script>
-    </scripts>
-    <scripts name="Door">
-      <script>scripts\Door_Create.gml</script>
-      <script>scripts\Door_Step.gml</script>
+    <scripts name="Forces">
+      <script>scripts\Force_Create.gml</script>
+      <script>scripts\Force_Step.gml</script>
+      <script>scripts\Force_Set.gml</script>
+      <scripts name="Force Aggregator">
+        <script>scripts\ForceAggregator_Create.gml</script>
+        <script>scripts\ForceAggregator_Step.gml</script>
+        <script>scripts\ForceAggregator_Destroy.gml</script>
+        <script>scripts\Force_Attach.gml</script>
+        <script>scripts\Force_Detach.gml</script>
+      </scripts>
     </scripts>
   </scripts>
   <objects name="objects">
     <object>objects\Player</object>
     <object>objects\Solid</object>
     <object>objects\SemiSolid</object>
+    <object>objects\Door</object>
     <objects name="System">
       <object>objects\StateTemplate</object>
       <object>objects\GameData</object>
@@ -99,8 +113,9 @@
       <object>objects\Camera</object>
       <object>objects\Logger</object>
       <object>objects\Animation</object>
+      <object>objects\ForceAggregator</object>
+      <object>objects\Force</object>
     </objects>
-    <object>objects\Door</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\setup</room>
