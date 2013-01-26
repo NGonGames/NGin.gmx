@@ -10,6 +10,12 @@
     <sprite>sprites\semisolid_sprite</sprite>
     <sprite>sprites\playermask_sprite</sprite>
     <sprite>sprites\doormask_sprite</sprite>
+    <sprites name="Menu">
+      <sprites name="Buttons">
+        <sprite>sprites\playbutton_sprite</sprite>
+      </sprites>
+      <sprite>sprites\credits_sprite</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -98,6 +104,13 @@
         <script>scripts\Force_Detach.gml</script>
       </scripts>
     </scripts>
+    <scripts name="Menu">
+      <script>scripts\Menu_Update.gml</script>
+      <script>scripts\Menu_Create.gml</script>
+    </scripts>
+    <scripts name="Credits">
+      <script>scripts\script48.gml</script>
+    </scripts>
   </scripts>
   <objects name="objects">
     <object>objects\Player</object>
@@ -116,9 +129,17 @@
       <object>objects\ForceAggregator</object>
       <object>objects\Force</object>
     </objects>
+    <objects name="menu">
+      <object>objects\PlayButton</object>
+      <object>objects\MenuObject</object>
+      <object>objects\MuteButton</object>
+      <object>objects\CreditsButton</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\setup</room>
+    <room>rooms\menu_rm</room>
+    <room>rooms\credits_rm</room>
     <room>rooms\test0</room>
     <room>rooms\test1</room>
   </rooms>
