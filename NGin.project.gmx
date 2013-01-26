@@ -23,7 +23,6 @@
   <scripts name="scripts">
     <scripts name="Player">
       <script>scripts\Player_Create.gml</script>
-      <script>scripts\Player_Step.gml</script>
       <script>scripts\Player_Draw.gml</script>
       <scripts name="States">
         <scripts name="Stand">
@@ -51,11 +50,12 @@
       <script>scripts\Player_X_Input.gml</script>
       <script>scripts\Player_X_Accelerate.gml</script>
       <script>scripts\Player_Detect_Dash.gml</script>
+      <script>scripts\Player_Step.gml</script>
     </scripts>
     <scripts name="StateTemplate">
       <script>scripts\State_Create.gml</script>
-      <script>scripts\State_Step.gml</script>
       <script>scripts\State_Change.gml</script>
+      <script>scripts\StateObject_Step.gml</script>
     </scripts>
     <scripts name="Animation">
       <script>scripts\Animation_Create.gml</script>
@@ -117,6 +117,12 @@
         <script>scripts\SmallGround_Create.gml</script>
         <script>scripts\SmallGround_Step.gml</script>
         <script>scripts\SmallGround_Draw.gml</script>
+        <scripts name="Patrolling">
+          <script>scripts\SmallGround_Partrolling.gml</script>
+        </scripts>
+        <scripts name="Attacking">
+          <script>scripts\SmallGround_Attacking.gml</script>
+        </scripts>
       </scripts>
     </scripts>
     <scripts name="DamageHitbox">
@@ -141,6 +147,7 @@
       <object>objects\ForceAggregator</object>
       <object>objects\Force</object>
       <object>objects\DamageHitbox</object>
+      <object>objects\StateObject</object>
     </objects>
     <objects name="Menu">
       <object>objects\PlayButton</object>
