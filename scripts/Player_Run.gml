@@ -3,14 +3,14 @@ if (state.age == 0) {
 
 Player_X_Input();
 Player_X_Accelerate(); 
-Move_X(iff(xprs, 0, 1));
+Move_X(motion, iff(vel.xprs, 0, 1));
 
 if (Input_Pressed(Input.jump)) {
     State_Change(jump);
     exit;
 };
 
-if ((xspd == 0) && (!xprs || place_meeting(x + sign(xmax), y, Solid))) {
+if ((vel.x == 0) && (!vel.xprs || place_meeting(x + sign(vel.xmax), y, Solid))) {
     State_Change(stand);
     exit;
 };

@@ -1,1 +1,1 @@
-ds_map_destroy(forcemap);
+ds_list_destroy(force_list);

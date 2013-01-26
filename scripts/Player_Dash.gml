@@ -3,28 +3,28 @@ if (state.age == 0) {
 }
 
 if (dash.dir == Input.right) {
-    xspd = xcap;
-    xmax = xcap;
+    vel.x = vel.xcap;
+    vel.xmax = vel.xcap;
 } else {
-    xspd = xcap * -1;
-    xmax = xspd;
+    vel.x = vel.xcap * -1;
+    vel.xmax = vel.x;
 }
 
 var new, goal;
-new = x + xspd;
-goal = dash.xbegin + dash.length * sign(xmax);
-if (xspd) {
+new = x + vel.x;
+goal = dash.xbegin + dash.length * sign(vel.xmax);
+if (vel.x) {
     if (new > goal) {
-        xspd = new - goal;
+        vel.x = new - goal;
     }
 } else {
     if (new < goal) {
-        xspd = new - goal;
+        vel.x = new - goal;
     }
 }
 
-Move_X();
+Move_X(motion);
 
-if (abs(xspd) != xcap) {
+if (abs(vel.x) != vel.xcap) {
     State_Change(run);
 }

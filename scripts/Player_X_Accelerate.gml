@@ -1,15 +1,15 @@
-if (xprs) {
-    if (abs(xspd) < xcap * (2.5 / 5)) {
-        xspd += xacl * sign(xmax);
+if (vel.xprs) {
+    if (abs(vel.x) < vel.xcap * (2.5 / 5)) {
+        vel.x += vel.xacl * sign(vel.xmax);
     }
-    xspd += xacl * sign(xmax);
-    if (abs(xspd) > xcap) {
-        xspd = xmax;
+    vel.x += vel.xacl * sign(vel.xmax);
+    if (abs(vel.x) > vel.xcap) {
+        vel.x = vel.xmax;
     }
 }
 
-if (abs(xspd) < xfrc) {
-    xspd = 0;
+if (abs(vel.x) < vel.fric) {
+    vel.x = 0;
 } else {
-    xspd -= xfrc * sign(xspd);
+    vel.x -= vel.fric * sign(vel.x);
 }

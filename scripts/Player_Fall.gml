@@ -5,8 +5,8 @@ if (state.age == 0) {
 
 if (Input_Pressed(Input.jump) && (place_meeting(x + 1, y, Solid) || place_meeting(x - 1, y, Solid))) {  // trying to walljump?
     jump.number -= 1;   // negate jump counter incrementing so you're not penalized for walljumping
-    xspd = xcap * iff(place_meeting(x + 1, y, Solid), -1, 1);   // start moving away from the wall
-    xmax = xcap * sign(xspd);   // set direction variable in most paranoid way possible
+    vel.x = vel.xcap * iff(place_meeting(x + 1, y, Solid), -1, 1);   // start moving away from the wall
+    vel.xmax = vel.xcap * sign(vel.x);   // set direction variable in most paranoid way possible
     State_Change(jump); // start jumping!
     jump.control = false;   // you've wall jumped, no soup for you. (momentary grace peroid for switching directionality of input)
     exit;
@@ -15,14 +15,14 @@ if (Input_Pressed(Input.jump) && (place_meeting(x + 1, y, Solid) || place_meetin
 Player_X_Input();   // detect and handle player input
 Player_X_Accelerate();  // handle motion based on current input status
 
-Move_X();   // move horiztonally
+Move_X(motion);   // move horiztonally
 
-yspd += yacl;   // gravity
+vel.y += vel.yacl;   // gravity
 
-Move_Y();   // fall
+Move_Y(motion);   // fall
 
 if (place_meeting(x, y + 1, Solid) || (place_meeting(x, y + 1, SemiSolid) && !place_meeting(x, y, SemiSolid))) {    // found ground to land on
-    if (xspd != 0) { State_Change(run); } else { State_Change(stand); } // either stand or run, based on whether you were moving the moment you hit the ground
+    if (vel.x != 0) { State_Change(run); } else { State_Change(stand); } // either stand or run, based on whether you were moving the moment you hit the ground
     jump.number = 0;    // reset jumps
     exit;
 }

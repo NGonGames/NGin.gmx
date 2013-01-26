@@ -4,35 +4,35 @@ press = false;
 release = false;
 
 if (Input_Pressed(Input.left)) {
-    xmax = -xcap;
+    vel.xmax = -vel.xcap;
     press = true;
 }
 
 if (Input_Pressed(Input.right)) {
-    xmax = xcap;
+    vel.xmax = vel.xcap;
     press = false;
 }
 
 if (Input_Released(Input.left) && Input_Down(Input.right)) {
-    xmax = xcap;
+    vel.xmax = vel.xcap;
     release = true;
 }
 
 if (Input_Released(Input.right) && Input_Down(Input.left)) {
-    xmax = -xcap;
+    vel.xmax = -vel.xcap;
     release = true;
 }
 
 if (Input_Down(Input.left) || Input_Down(Input.right)) {
-    xprs = true;
+    vel.xprs = true;
 } else {
-    xprs = false;
+    vel.xprs = false;
 }
 
-if (!press && !release && xprs) {
+if (!press && !release && vel.xprs) {
     if (Input_Down(Input.left)) {
-        xmax = -xcap;
+        vel.xmax = -vel.xcap;
     } else if (Input_Down(Input.right)) {
-        xmax = xcap;
+        vel.xmax = vel.xcap;
     }
 }
