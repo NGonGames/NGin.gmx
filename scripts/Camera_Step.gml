@@ -1,12 +1,12 @@
 
-if (abs(Player.xspd) > Player.xcap / 2) {
+if (abs(Player.vel.x) > Player.vel.xcap / 2) {
     time[0] += 1;
 } else {
     time[0] = 0;
 }
 
-goal_x = Player.x + (width * .4) * sign(Player.xmax) * min(1, (abs(Player.xspd) / Player.xcap) * min((time[0] / 45), 1));
-goal_y = Player.y - 30 + (height * .2) * max(0, Player.yspd / Player.ymax);
+goal_x = Player.x + (width * .4) * sign(Player.vel.xmax) * min(1, (abs(Player.vel.x) / Player.vel.xcap) * min((time[0] / 45), 1));
+goal_y = Player.y - 30 + (height * .2) * max(0, Player.vel.y / Player.vel.ymax);
 
 goal_x = min(max(goal_x, width / 2), room_width - width / 2);
 goal_y = min(max(goal_y, height / 2), room_height - height / 2);

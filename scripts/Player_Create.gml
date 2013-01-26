@@ -10,17 +10,19 @@ instance_create(x, y, Camera);  // create camera object to act as the viewport f
     /** -- Any variable description preceded by @ is 
         modifiable for the purpose of changing game feel -- **/
 
-xspd[0] = 0;       // current x velocity
-yspd[0] = 0;       // current y velocity
+motion = instance_create(0, 0, ForceAggregator);
+vel = instance_create(0, 0, Force);
 
-xmax = 14;      // @maximum horizontal velocity
-xcap = xmax;    // maximum horizontal speed
-xacl = 1.8;     // @horizontal acceleration
-xprs = false;   // whether some form of horizontal input is held down.
-xfrc = 1.1;     // @horizontal friction
+vel.xmax = 14;      // @maximum horizontal velocity
+vel.xcap = 14;      // maximum horizontal speed
+vel.xacl = 1.8;     // @horizontal acceleration
+vel.xprs = false;   // whether some form of horizontal input is held down.
+vel.fric = 1.1;     // @horizontal friction
 
-ymax = 15;      // @maximum falling speed
-yacl = 2.1;     // @gravity
+vel.ymax = 15;      // @maximum falling speed
+vel.yacl = 2.1;     // @gravity
+
+Force_Attach(vel, motion);
 
 stand = instance_create(0, 0, StateTemplate);       // represents normal, stationary resting
   stand.main = Player_Stand;                        // link Player_Stand as script for step event

@@ -51,7 +51,6 @@
       <script>scripts\Player_X_Input.gml</script>
       <script>scripts\Player_X_Accelerate.gml</script>
       <script>scripts\Player_Detect_Dash.gml</script>
-      <script>scripts\Player_Attach_Force.gml</script>
     </scripts>
     <scripts name="StateTemplate">
       <script>scripts\State_Create.gml</script>
@@ -103,6 +102,8 @@
         <script>scripts\ForceAggregator_Destroy.gml</script>
         <script>scripts\Force_Attach.gml</script>
         <script>scripts\Force_Detach.gml</script>
+        <script>scripts\ForceAggregator_Add_X.gml</script>
+        <script>scripts\ForceAggregator_Add_Y.gml</script>
       </scripts>
     </scripts>
     <scripts name="Menu">
