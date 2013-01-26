@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>9</kind>
-            <script>Menu_Update</script>
+            <script>Menu_Step</script>
           </argument>
           <argument>
             <kind>0</kind>

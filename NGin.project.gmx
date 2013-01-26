@@ -106,10 +106,18 @@
       </scripts>
     </scripts>
     <scripts name="Menu">
-      <script>scripts\Menu_Update.gml</script>
+      <script>scripts\Menu_Step.gml</script>
     </scripts>
     <scripts name="Credits">
-      <script>scripts\Credits_Update.gml</script>
+      <script>scripts\Credits_Step.gml</script>
+    </scripts>
+    <scripts name="Enemies">
+      <scripts name="SmallGround">
+        <script>scripts\SmallGround_Create.gml</script>
+        <script>scripts\SmallGround_Step.gml</script>
+        <script>scripts\SmallGround_Draw.gml</script>
+        <scripts name="States"/>
+      </scripts>
     </scripts>
   </scripts>
   <objects name="objects">
