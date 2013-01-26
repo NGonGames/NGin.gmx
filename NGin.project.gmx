@@ -117,8 +117,11 @@
         <script>scripts\SmallGround_Create.gml</script>
         <script>scripts\SmallGround_Step.gml</script>
         <script>scripts\SmallGround_Draw.gml</script>
-        <scripts name="States"/>
       </scripts>
+    </scripts>
+    <scripts name="DamageHitbox">
+      <script>scripts\DamageHitbox_Step.gml</script>
+      <script>scripts\DamageHitbox_Create.gml</script>
     </scripts>
   </scripts>
   <objects name="objects">
@@ -137,6 +140,7 @@
       <object>objects\Animation</object>
       <object>objects\ForceAggregator</object>
       <object>objects\Force</object>
+      <object>objects\DamageHitbox</object>
     </objects>
     <objects name="Menu">
       <object>objects\PlayButton</object>
