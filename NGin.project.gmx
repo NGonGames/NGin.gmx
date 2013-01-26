@@ -13,6 +13,7 @@
     <sprites name="Menu">
       <sprites name="Buttons">
         <sprite>sprites\playbutton_sprite</sprite>
+        <sprite>sprites\mutebutton_sprite</sprite>
       </sprites>
       <sprite>sprites\credits_sprite</sprite>
     </sprites>
@@ -106,10 +107,9 @@
     </scripts>
     <scripts name="Menu">
       <script>scripts\Menu_Update.gml</script>
-      <script>scripts\Menu_Create.gml</script>
     </scripts>
     <scripts name="Credits">
-      <script>scripts\script48.gml</script>
+      <script>scripts\Credits_Update.gml</script>
     </scripts>
   </scripts>
   <objects name="objects">
@@ -129,11 +129,13 @@
       <object>objects\ForceAggregator</object>
       <object>objects\Force</object>
     </objects>
-    <objects name="menu">
+    <objects name="Menu">
       <object>objects\PlayButton</object>
       <object>objects\MenuObject</object>
       <object>objects\MuteButton</object>
       <object>objects\CreditsButton</object>
+      <object>objects\CreditsExitButton</object>
+      <object>objects\CreditsObject</object>
     </objects>
   </objects>
   <rooms name="rooms">
