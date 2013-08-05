@@ -10,13 +10,6 @@
     <sprite>sprites\semisolid_sprite</sprite>
     <sprite>sprites\playermask_sprite</sprite>
     <sprite>sprites\doormask_sprite</sprite>
-    <sprites name="Menu">
-      <sprites name="Buttons">
-        <sprite>sprites\playbutton_sprite</sprite>
-        <sprite>sprites\mutebutton_sprite</sprite>
-      </sprites>
-      <sprite>sprites\credits_sprite</sprite>
-    </sprites>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
