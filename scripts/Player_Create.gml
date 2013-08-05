@@ -10,7 +10,6 @@ instance_create(x, y, Camera);  // create camera object to act as the viewport f
     /** -- Any variable description preceded by @ is 
         modifiable for the purpose of changing game feel -- **/
 
-motion = instance_create(0, 0, ForceAggregator);
 vel = instance_create(0, 0, Force);
 
 vel.xmax = 14;      // @maximum horizontal velocity
@@ -21,8 +20,6 @@ vel.fric = 1.1;     // @horizontal friction
 
 vel.ymax = 15;      // @maximum falling speed
 vel.yacl = 2.1;     // @gravity
-
-Force_Attach(vel, motion);
 
 stand = instance_create(0, 0, StateTemplate);       // represents normal, stationary resting
   stand.main = Player_Stand;                        // link Player_Stand as script for step event
@@ -48,7 +45,7 @@ jump = instance_create(0, 0, StateTemplate);        // Represents upwards vertic
   jump.wallgrab = false;                            // flag for indicating auto-walljump behavior
   jump.number = 0;                                  // number of jumps since last touched a surface
   jump.limit = 2;                                   // @maximum number of jumps
-  jump.force = 23;                                  // @force of jump
+  jump.height = 23;                                 // @force of jump
 
 fall = instance_create(0, 0, StateTemplate);        // Represents downwards vertical motion **ONLY**
   fall.main = Player_Fall;                          // link Player_Fall as script to be called each frame

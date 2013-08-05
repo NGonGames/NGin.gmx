@@ -15,11 +15,11 @@ if (Input_Pressed(Input.jump) && (place_meeting(x + 1, y, Solid) || place_meetin
 Player_X_Input();   // detect and handle player input
 Player_X_Accelerate();  // handle motion based on current input status
 
-Move_X(motion);   // move horiztonally
+Move_X();   // move horiztonally
 
 vel.y += vel.yacl;   // gravity
 
-Move_Y(motion);   // fall
+Move_Y();   // fall
 
 if (place_meeting(x, y + 1, Solid) || (place_meeting(x, y + 1, SemiSolid) && !place_meeting(x, y, SemiSolid))) {    // found ground to land on
     if (vel.x != 0) { State_Change(run); } else { State_Change(stand); } // either stand or run, based on whether you were moving the moment you hit the ground

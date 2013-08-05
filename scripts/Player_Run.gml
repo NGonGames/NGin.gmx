@@ -3,7 +3,7 @@ if (state.age == 0) {
 
 Player_X_Input();
 Player_X_Accelerate(); 
-Move_X(motion, iff(vel.xprs, 0, 1));
+Move_X(iff(vel.xprs, 0, 1));
 
 if (Input_Pressed(Input.jump)) {
     State_Change(jump);

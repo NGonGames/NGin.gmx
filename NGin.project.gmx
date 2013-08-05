@@ -92,20 +92,6 @@
       <script>scripts\Move_Y.gml</script>
       <script>scripts\iff.gml</script>
     </scripts>
-    <scripts name="Forces">
-      <script>scripts\Force_Create.gml</script>
-      <script>scripts\Force_Step.gml</script>
-      <script>scripts\Force_Set.gml</script>
-      <scripts name="Force Aggregator">
-        <script>scripts\ForceAggregator_Create.gml</script>
-        <script>scripts\ForceAggregator_Step.gml</script>
-        <script>scripts\ForceAggregator_Destroy.gml</script>
-        <script>scripts\Force_Attach.gml</script>
-        <script>scripts\Force_Detach.gml</script>
-        <script>scripts\ForceAggregator_Add_X.gml</script>
-        <script>scripts\ForceAggregator_Add_Y.gml</script>
-      </scripts>
-    </scripts>
     <scripts name="Menu">
       <script>scripts\Menu_Step.gml</script>
     </scripts>
@@ -144,26 +130,13 @@
       <object>objects\Camera</object>
       <object>objects\Logger</object>
       <object>objects\Animation</object>
-      <object>objects\ForceAggregator</object>
       <object>objects\Force</object>
-      <object>objects\DamageHitbox</object>
       <object>objects\StateObject</object>
-    </objects>
-    <objects name="Menu">
-      <object>objects\PlayButton</object>
-      <object>objects\MenuObject</object>
-      <object>objects\MuteButton</object>
-      <object>objects\CreditsButton</object>
-      <object>objects\CreditsExitButton</object>
-      <object>objects\CreditsObject</object>
     </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\setup</room>
-    <room>rooms\menu_rm</room>
-    <room>rooms\credits_rm</room>
-    <room>rooms\test0</room>
-    <room>rooms\test1</room>
+    <room>rooms\rm_test</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

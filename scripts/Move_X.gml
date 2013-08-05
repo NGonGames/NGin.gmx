@@ -1,23 +1,21 @@
-var mode, xs, force_x, agg;   // mode allows for parameterization of the motion; xs is sign(force_x). simply used for caching and shorthand
+var mode, xs, force_x;   // mode allows for parameterization of the motion; xs is sign(force_x). simply used for caching and shorthand
 
 /// @TODO: Add force argument to all calls of this function
 
 if (argument_count == 0) {  // no arguments means pick default mode (normal movement, up/down slopes, etc
-    show_error("Don't call Move_X with no args!", true);
+    mode = 0;   // normal mode!!
 } else if (argument_count == 1) {
-    agg = argument[0];    // agg is a force aggregator object
+    mode = argument[0];    // agg is a force aggregator object
     mode = 0;   // normal mode!!
 } else if (argument_count == 2) {
-    agg = argument[0];
-    mode = argument[1]; // other modes include (-1 ignore collisions), and (1 don't walk off cliffs)
+    show_error("Too many args!?!?!", 0);
 }
 
 /// @TODO: add slope tolerance for angle of climb
 /// @TODO: add slowdown/speedup for hills
 
-force_x = ForceAggregator_Add_X(agg);
-
-xs = sign(force_x);    // this is just shorthand
+force_x = vel.x;
+xs = sign(vel.x);    // this is just shorthand
 
 switch (mode) {
     case 0: // normal motion

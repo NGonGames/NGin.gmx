@@ -23,7 +23,7 @@ if (vel.x) {
     }
 }
 
-Move_X(motion);
+Move_X();
 
 if (abs(vel.x) != vel.xcap) {
     State_Change(run);

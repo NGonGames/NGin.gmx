@@ -1,5 +1,5 @@
 if (state.age == 0) {
-    vel.y = -jump.force;
+    vel.y = -jump.height;
     jump.number += 1;
     jump.wallgrab = false;
 }
@@ -28,7 +28,7 @@ if (Input_Pressed(Input.jump) && (vel.xprs || jump.wallgrab) && (place_meeting(x
     exit;
 }
 
-Move_X(motion);
+Move_X();
 
 vel.y += vel.yacl;
 
@@ -36,7 +36,7 @@ if (!Input_Down(Input.jump) && jump.control) {
     vel.y += vel.yacl;
 }
 
-Move_Y(motion);
+Move_Y();
 
 if (vel.y >= 0) {
     State_Change(fall);
